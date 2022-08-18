@@ -37,7 +37,7 @@ const RecordsList = () => {
                          titleIcon: 'exclamation triangle',
                          title: 'System Alert',
                          messageIcon: 'times circle',
-                         message: 'System ချို့ယွင်းချက်ဖြစ်ပေါ်နေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
+                         message: 'တစ်စုံတစ်ခုမှားယွင်းနေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
                     }))
                     setIsLoading(false)
                })
@@ -68,7 +68,7 @@ const RecordsList = () => {
                     titleIcon: 'exclamation triangle',
                     title: 'System Alert',
                     messageIcon: 'times circle',
-                    message: 'System ချို့ယွင်းချက်ဖြစ်ပေါ်နေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
+                    message: 'တစ်စုံတစ်ခုမှားယွင်းနေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
                }))
           })
      }
@@ -124,7 +124,7 @@ const RecordsList = () => {
                     titleIcon: 'exclamation triangle',
                     title: 'System Alert',
                     messageIcon: 'times circle',
-                    message: 'System ချို့ယွင်းချက်ဖြစ်ပေါ်နေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
+                    message: 'တစ်စုံတစ်ခုမှားယွင်းနေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
                }))
           })
 
