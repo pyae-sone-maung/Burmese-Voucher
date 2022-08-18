@@ -1,9 +1,12 @@
 # Burmese Voucher
 
--   Cloud base simple sale voucher system for Burmese.
--   https://burmesevoucher.netlify.app/
+Cloud base simple sale voucher system.
 
-#### Screenshots
+-   https://burmesevoucher.netlify.app/
+    -   username - pyaesone
+    -   password - abc123
+
+### Screenshots
 
 <table> 
      <tr> 
@@ -12,7 +15,7 @@
      </tr>
 </table>
 
-#### Download or Clone the repository
+### Download or Clone the repository
 
 -   Run this command on terminal or [Download here](https://github.com/pyae-sone-maung/Burmese-Voucher/archive/refs/heads/main.zip).
 
@@ -33,7 +36,7 @@ npm install
 npm start
 ```
 
-#### Guide
+### Guide
 
 -   Create .env file in root folder and config your api
 
