@@ -1,4 +1,4 @@
-const bvapi = 'https://burmese-voucher-api.herokuapp.com'
+const bvapi = process.env.REACT_APP_API_URL
 
 export const accountLoginURL = bvapi + "/login"   // အကောင့်၀င်ရန်
 
