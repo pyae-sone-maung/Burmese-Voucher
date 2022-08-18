@@ -56,7 +56,7 @@ const Login = () => {
                               : setErrorMessage(prevState => ({
                                    open: true,
                                    icon: 'exclamation triangle',
-                                   message: 'System ချို့ယွင်းချက်ဖြစ်ပေါ်နေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
+                                   message: 'တစ်စုံတစ်ခုမှားယွင်းနေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
                               }))
                })
 
