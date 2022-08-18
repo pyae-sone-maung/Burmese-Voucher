@@ -8,11 +8,11 @@ import { createVoucherURL } from '../api/burmese-voucher-api';
 const Voucher = () => {
      // Print document
      const printRef = useRef();
-     const pageSize = () => {
-          return `@page {  size: 105mm 148mm; margin:${'0.5cm'}; }`;
-     }
+     const getPageMargins = () => {
+          return `@page { margin: ${'0.5cm'} ${'16cm'} ${0} ${'1cm'} !important;}`;
+     };
      const printPage = useReactToPrint({
-          pageStyle: pageSize,
+          pageStyle: getPageMargins,
           onBeforeGetContent: () => printRef.current.style.display = 'block',
           onAfterPrint: () => printRef.current.style.display = 'none',
           content: () => printRef.current,
@@ -158,7 +158,7 @@ const Voucher = () => {
                          ...prevState,
                          open: true,
                          icon: 'exclamation triangle',
-                         message: 'System ချို့ယွင်းချက်ဖြစ်ပေါ်နေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
+                         message: 'တစ်စုံတစ်ခုမှားယွင်းနေပါသည်။ ဤ၀န်ဆောင်မှုအား လက်ရှိအသုံးပြု၍မရနိုင်သေးပါ။'
                     }))
                })
      }
@@ -324,16 +324,16 @@ const Voucher = () => {
                {/* PRINT DOCUMENT  */}
                <div className='mt-56'>
                     <div ref={printRef} style={{ display: 'none' }}>
-                         <div className=' py-1 text-center font-noto font-bold text-sm tracking-wider'> {businessInfo.businessName} </div>
-                         <div className=' font-noto text-center tracking-wide' style={{ fontSize: '9px' }}>{businessInfo.businessType} </div>
-                         <div className='font-noto text-center' style={{ fontSize: '8px' }}> လိပ်စာ - {businessInfo.address} </div>
-                         <div className='font-noto text-center' style={{ fontSize: '8px' }}> ဖုန်း - {businessInfo.phone} </div>
+                         <div className=' py-1 text-center font-noto font-bold text-2xl tracking-wider'> {businessInfo.businessName} </div>
+                         <div className=' font-noto text-center text-base tracking-wide'>{businessInfo.businessType} </div>
+                         <div className='py-1 font-noto text-center text-sm'> လိပ်စာ - {businessInfo.address} </div>
+                         <div className='font-noto text-center text-sm'> ဖုန်း - {businessInfo.phone} </div>
                          <Segment>
-                              <div className='font-noto text-right pr-3' style={{ fontSize: '8px' }}>
+                              <div className='font-noto text-sm text-right pr-3'>
                                    <p> ဘောင်ချာနံပါတ် - {voucher.voucherNo} </p>
                                    <p>  နေ့ရက် - {voucher.date} </p>
                               </div>
-                              <div className='px-5 mb-1' style={{ fontSize: '8px' }}>
+                              <div className='px-5 mb-1 text-sm'>
                                    <div className='flex gap-x-2'>
                                         <p className='font-noto'> အမည် - </p>
                                         <p className='font-noto'> {voucher.customerName}</p>
@@ -344,7 +344,7 @@ const Voucher = () => {
                                    </div>
                               </div>
                               <Table celled={true}>
-                                   <Table.Header className='font-noto text-center' style={{ fontSize: '8px' }}>
+                                   <Table.Header className='font-noto text-center text-sm'>
                                         <Table.Row>
                                              <Table.HeaderCell> စဉ် </Table.HeaderCell>
                                              <Table.HeaderCell> ပစ္စည်းအမျိုးအစား </Table.HeaderCell>
@@ -357,7 +357,7 @@ const Voucher = () => {
                                    <Table.Body >
                                         {
                                              voucher.items.map((item, index) => (
-                                                  <Table.Row className='font-noto text-center' key={index} style={{ fontSize: '8px' }}>
+                                                  <Table.Row className='font-noto text-center text-sm' key={index}>
                                                        <Table.Cell> {index + 1} </Table.Cell>
                                                        <Table.Cell> {item.itemType} </Table.Cell>
                                                        <Table.Cell> {item.itemQuantity} </Table.Cell>
@@ -369,24 +369,24 @@ const Voucher = () => {
                                         <Table.Row>
                                              <Table.Cell colSpan={5}> </Table.Cell>
                                         </Table.Row>
-                                        <Table.Row className='font-noto font-bold text-center' style={{ fontSize: '8px' }}>
+                                        <Table.Row className='font-noto font-bold text-center text-sm'>
                                              <Table.Cell colSpan={3} style={{ border: 'none' }}></Table.Cell>
                                              <Table.Cell> စုစုပေါင်း </Table.Cell>
                                              <Table.Cell> {voucher.totalAmount} ကျပ် </Table.Cell>
                                         </Table.Row>
-                                        <Table.Row className='font-noto font-bold text-center' style={{ fontSize: '8px' }}>
+                                        <Table.Row className='font-noto font-bold text-center text-sm'>
                                              <Table.Cell colSpan={3} style={{ border: 'none' }}></Table.Cell>
                                              <Table.Cell> စရံငွေ </Table.Cell>
                                              <Table.Cell> {voucher.depositeAmount} ကျပ် </Table.Cell>
                                         </Table.Row>
-                                        <Table.Row className='font-noto font-bold text-center' style={{ fontSize: '8px' }}>
+                                        <Table.Row className='font-noto font-bold text-center text-sm'>
                                              <Table.Cell colSpan={3} style={{ border: 'none' }}></Table.Cell>
                                              <Table.Cell> ကျန်ငွေ </Table.Cell>
                                              <Table.Cell> {voucher.balanceAmount} ကျပ် </Table.Cell>
                                         </Table.Row>
                                    </Table.Body>
                               </Table>
-                              <p className='text-center mt-3 font-roboto font-thin tracking-wide' style={{ fontSize: '7px' }}> Developed By Burmese Voucher</p>
+                              <p className='text-center mt-3 font-roboto font-thin tracking-wide' style={{ fontSize: '9px' }}> Developed By Burmese Voucher</p>
                          </Segment>
                     </div>
                </div>
