@@ -298,7 +298,7 @@ const Voucher = () => {
                </div>
 
                <div className='flex place-content-center py-16 gap-x-2'>
-                    <Button primary size='large' onClick={saveVoucher}> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
+                    <Button primary size='large' disabled onClick={saveVoucher}> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
                     <Button secondary size='large' onClick={printPage}> <Icon name='print' /> ဘောင်ချာထုတ်မည် </Button>
                </div>
 

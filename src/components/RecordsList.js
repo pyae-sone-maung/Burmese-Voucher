@@ -192,7 +192,7 @@ const RecordsList = () => {
                                                   <Table.Cell> {item.totalAmount} ကျပ် </Table.Cell>
                                                   <Table.Cell className='mt-1 lg:mt-0 w-80'>
                                                        <Button size='tiny' primary onClick={e => viewVoucher(item)}> <Icon name='eye' /> ကြည့်မည် </Button>
-                                                       <Button size='tiny' color='red' onClick={e => deleteVoucher(item._id, index)}> <Icon name='trash' /> ဖျက်မည် </Button>
+                                                       <Button size='tiny' color='red' disabled onClick={e => deleteVoucher(item._id, index)}> <Icon name='trash' /> ဖျက်မည် </Button>
                                                   </Table.Cell>
                                              </Table.Row>
                                         ))

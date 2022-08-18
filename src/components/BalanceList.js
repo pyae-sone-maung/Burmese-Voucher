@@ -289,7 +289,7 @@ const BalanceList = () => {
                                                        : null
                                              }
                                         </Segment>
-                                        <Button primary onClick={saveVoucher} size='large'> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
+                                        <Button primary onClick={saveVoucher} size='large' disabled> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
                                         <Button secondary onClick={printPage} size='large'> <Icon name='print' /> ဘောင်ချာထုတ်မည် </Button>
                                         <Button color='red' size='large' onClick={() => { setOpenBalanceModal(false); setVoucherIndex(null); setDepositeCheck(false) }}> <Icon name='close' /> ပိတ်မည် </Button>
                                    </Modal.Actions>

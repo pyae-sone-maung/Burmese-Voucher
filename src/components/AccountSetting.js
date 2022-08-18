@@ -125,7 +125,7 @@ const AccountSetting = () => {
                               <Input icon='phone square' iconPosition='left' placeholder='09-xxx, 09-xxx' id='phoneNo' className='mt-1 w-80 lg:w-96'></Input>
                          </div>
                          <div className='py-2 lg:py-4 grid place-content-center'>
-                              <Button primary type='submit'> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
+                              <Button primary type='submit' disabled> <Icon name='save' /> သိမ်းဆည်းမည် </Button>
                          </div>
                     </Form>
 
@@ -146,7 +146,7 @@ const AccountSetting = () => {
                               <Input icon='lock' iconPosition='left' type='password' minLength='6' placeholder='Confirm new password' id='cfmnewpswd' className='mt-1 w-80 lg:w-96' required></Input>
                          </div>
                          <div className='py-2 lg:py-4 grid place-content-center'>
-                              <Button primary type='submit'> <Icon name='save' /> စကား၀ှက်ပြောင်းမည် </Button>
+                              <Button primary type='submit' disabled> <Icon name='save' /> စကား၀ှက်ပြောင်းမည် </Button>
                          </div>
                     </Form>
                </div>
