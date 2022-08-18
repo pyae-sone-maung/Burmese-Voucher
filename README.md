@@ -35,4 +35,8 @@ npm start
 
 #### Guide
 
--   Find .env file in root and configure your api
+-   Create .env file in root folder and config your api
+
+```
+REACT_APP_API_URL = < Your api url >
+```
