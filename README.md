@@ -17,7 +17,7 @@
 -   Run this command on terminal or [Download here](https://github.com/pyae-sone-maung/Burmese-Voucher/archive/refs/heads/main.zip).
 
 ```
-git clone https://github.com/pyae-sone-maung/Google-Authentication-Node.js-App.git
+git clone https://github.com/pyae-sone-maung/Burmese-Voucher.git
 ```
 
 -   Install dependencies
